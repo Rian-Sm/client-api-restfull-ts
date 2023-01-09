@@ -1,5 +1,3 @@
-import { Client } from "../../models/client";
-
 export interface CreateClientParams {
   email: string;
   password: string;
