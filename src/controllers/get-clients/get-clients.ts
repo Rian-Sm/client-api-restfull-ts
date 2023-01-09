@@ -1,6 +1,5 @@
 import validator from "validator";
 import { EncriptClient } from "../../encrypt/encrypt";
-import { Client } from "../../models/client";
 import { badRequest, internalError, ok, unauthorized } from "../helpers";
 import { ErrorResponse, HttpRequest, IController } from "../protocols";
 import {
@@ -46,7 +45,6 @@ export class GetClientsController implements IController {
         return unauthorized("Invalid email or password.");
       } else {
         const firstClient = client[0];
-        console.log(firstClient);
 
         const passwordIsValid = EncriptClient.encryptHashValid(
           body?.password,

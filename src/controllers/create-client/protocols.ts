@@ -3,6 +3,10 @@ import { Client } from "../../models/client";
 export interface CreateClientParams {
   email: string;
   password: string;
+}
+export interface CreateClientBody {
+  email: string;
+  password: string;
   accessToken: string;
 }
 
@@ -12,5 +16,5 @@ export interface CreateClientResponse {
 }
 
 export interface ICreateClientRepository {
-  createClient(params: CreateClientParams): Promise<CreateClientResponse>;
+  createClient(params: CreateClientBody): Promise<CreateClientResponse>;
 }

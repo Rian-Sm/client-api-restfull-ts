@@ -54,7 +54,6 @@ export class CreateClientController implements IController {
       const clients = await this.getClientsRepository.getClient({
         email: body?.email,
       });
-      console.log("CLIENTS", clients);
 
       if (clients.length) {
         return badRequest(`E-mail already registered.`);
@@ -68,9 +67,6 @@ export class CreateClientController implements IController {
       const accessToken = EncriptClient.encryptHash(
         dateNow + "Zm9jdXMgdGV4dGls"
       );
-      console.log(body.password, password);
-
-      console.log(dateNow + "Zm9jdXMgdGV4dGls", accessToken);
 
       const client = await this.createUserRepository.createClient({
         email: body?.email,
