@@ -36,7 +36,7 @@ ou
 yarn
 ```
 
-### 4. Instalação de dependências
+### 4. Iniciar projeto
 
 Os Comandos para iniciar a API são:
 
