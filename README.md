@@ -36,7 +36,7 @@ ou
 yarn
 ```
 
-### 4. Iniciar projeto
+### 3. Iniciar projeto
 
 Os Comandos para iniciar a API são:
 
